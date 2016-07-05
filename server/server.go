@@ -116,7 +116,7 @@ func main() {
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/login", login(db))
 	http.HandleFunc("/signup", signup(db))
-	http.HandleFunc("/create", checkSession(create(db)))
+	http.HandleFunc("/create", create(db))
 	http.HandleFunc("/item", item(db))
 	http.ListenAndServe(":8080", nil)
 }
