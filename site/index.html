@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1>Home Page</h1>
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+    <a href="/create">Create</a>
+    
+    <div>
+      {{range .}}
+        <div>
+          <h3><a href="/item?id={{.Id}}">{{.Id}} {{.Title}}</a></h3> 
+        </div> 
+      {{end}}
+    </div>
+</body>
+</html>
